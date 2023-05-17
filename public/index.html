@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tombola</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" type="module"></script>
+</head>
+
+<body>
+
+  <main>
+    <h1>Tombola</h1>
+    <hr>
+  
+    <div id="join-div">
+      <section>
+        <input id="schedine-count-input" type="number" min="1" placeholder="Number of schedine">
+        <button id="join-btn">Join</button>  
+      </section>
+    </div>
+
+    <div id="game-div" class="hidden">
+      <section>
+        <h2>Tabellone</h2>
+        <div id="tabellone-placeholder"></div>
+        <p>Extracted number: <span id="extracted-num-txt"></span></p>
+        <p>Aiming to <span id="partial-win-txt"></span></p>
+        <button id="ready-btn">Ready</button>
+      </section>
+
+      <section>
+        <h2>Schedine</h2>
+        <i id="loader"></i>
+        <div id="schedine-placeholder"></div>
+      </section>
+    </div>
+
+  </main>
+
+</body>
+
+</html>

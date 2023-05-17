@@ -1,0 +1,150 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Segoe UI,Arial,sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+h1, h2 {
+  width: 100%;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+}
+
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+input {
+  padding: 0.7rem 1rem;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;  
+}
+
+input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 8px 0 #2196f3;
+}
+
+
+button {
+  padding: 13px 45px;
+  color: #fff;
+  background-color: rgb(14 165 233);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 13px;
+  margin-top: 0.5rem;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: rgb(3 105 161);
+}
+
+
+#join-div, #game-div {
+  flex: 1;
+}
+
+
+#join-div section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+
+#game-div {
+  display: flex;
+  flex-direction: row;
+}
+
+#game-div section {
+  width: 50%;
+  height: 100%;
+}
+
+#game-div section:first-child {
+  border-right: 1px solid black;
+}
+
+
+#tabellone-placeholder {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.schedina {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+#tabellone-placeholder > div, .schedina > div {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#tabellone-placeholder > div:nth-of-type(10n), .schedina > div:nth-of-type(9n) {
+  border-right: 1px solid black;
+}
+
+#tabellone-placeholder > div:nth-last-child(-n+10), .schedina > div:nth-last-child(-n+9) {
+  border-bottom: 1px solid black;
+}
+
+.marked {
+  background-color: yellow;
+}
+
+
+#loader {
+  display: block;
+  margin: 0 auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
